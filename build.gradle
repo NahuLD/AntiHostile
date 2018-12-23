@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '2.0.2'
+}
+
+group 'me.nahuld'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+    compileOnly 'org.bukkit:bukkit:1.12.2-R0.1-SNAPSHOT'
+}
+
+jar.manifest.attributes(
+        'Main-Class': 'me.nahuld.antihostile.Main'
+)
+
+compileJava {
+    options.compilerArgs += ['-parameters']
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+}
+
+shadowJar {
+    archiveName = "antihostile-v${version}.${extension}"
+}
+
+build.dependsOn shadowJar

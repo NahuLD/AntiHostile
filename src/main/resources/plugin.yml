@@ -1,0 +1,17 @@
+main: me.nahuld.antihostile.Main
+version: 0.0.1
+
+name: AntiHostile
+description: Don't let ugly entities target you anymore!
+
+author: NahuLD
+
+commands:
+  antihostile:
+    description: Antihostile plugin command.
+    permission: antihostile.toggle
+
+permissions:
+  antihostile.toggle:
+    default: op
+    description: Antihostile only permission.
