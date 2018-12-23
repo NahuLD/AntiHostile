@@ -1,5 +1,5 @@
 main: me.nahuld.antihostile.Main
-version: 0.0.1
+version: v0.0.4
 
 name: AntiHostile
 description: Don't let ugly entities target you anymore!
