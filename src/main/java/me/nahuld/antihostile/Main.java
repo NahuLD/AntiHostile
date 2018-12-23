@@ -35,7 +35,7 @@ public class Main extends JavaPlugin implements Listener {
 
         if (!command.getName().equals("antihostile")) return true;
 
-        if (player.hasPermission("antihostile.toggle")) {
+        if (!player.hasPermission("antihostile.toggle")) {
             player.sendMessage(color("&cYou don't have enough permissions for this command."));
             return true;
         }
